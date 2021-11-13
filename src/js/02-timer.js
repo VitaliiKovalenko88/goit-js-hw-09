@@ -23,7 +23,7 @@ const options = {
     if (selectedDates[0] < new Date().getTime()) {
       window.alert('Please choose a date in the future');
       refs.startBtn.disabled = true;
-      console.log(selectedDates[0]);
+
       return;
     }
     refs.startBtn.disabled = false;
@@ -43,7 +43,7 @@ function onStartTimer(targetDate) {
       refs.hours.textContent = hours.padStart();
       refs.minutes.textContent = minutes.padStart();
       refs.seconds.textContent = seconds.padStart();
-      console.log(currentDate);
+
       if (currentDate < 1000) {
         clearInterval(intervalId);
       }
